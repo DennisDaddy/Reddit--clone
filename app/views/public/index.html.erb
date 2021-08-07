@@ -39,10 +39,9 @@
 
 			<div class="card" style="width: 18rem;">
 				<ul class="list-group-flush">
-					<li class="list-group-item">This is it</li>
-					<li class="list-group-item">This is it</li>
-					<li class="list-group-item">This is it</li>
-					<li class="list-group-item">This is it</li>
+					<% @communities.each do |community| %>
+					  <li class="list-group-item"><%= link_to community.name, community_path(community) %></li>
+					<% end %>
 				</ul>
 			</div>
 
